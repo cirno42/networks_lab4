@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="412.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="snakes.GameSetupController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="48.0" prefWidth="421.0" style="-fx-background-color: #2E3532;" text="WIDTH" textFill="#e0e2db" VBox.vgrow="ALWAYS">
+         <font>
+            <Font name="Arial Bold Italic" size="13.0" />
+         </font></Label>
+      <TextField fx:id="widthField" alignment="CENTER" prefHeight="34.0" prefWidth="370.0" style="-fx-background-color: #D3EFBD;" VBox.vgrow="ALWAYS" />
+      <Label alignment="CENTER" prefHeight="48.0" prefWidth="421.0" style="-fx-background-color: #2E3532;" text="HEIGHT" textFill="#e0e2db" VBox.vgrow="ALWAYS">
+         <font>
+            <Font name="Arial Bold Italic" size="13.0" />
+         </font></Label>
+      <TextField fx:id="heightField" alignment="CENTER" prefHeight="34.0" prefWidth="370.0" style="-fx-background-color: #D3EFBD;" VBox.vgrow="ALWAYS" />
+      <Label alignment="CENTER" prefHeight="48.0" prefWidth="421.0" style="-fx-background-color: #2E3532;" text=" FOOD STATIC" textFill="#e0e2db" VBox.vgrow="ALWAYS">
+         <font>
+            <Font name="Arial Bold Italic" size="13.0" />
+         </font></Label>
+      <TextField fx:id="foodStaticField" alignment="CENTER" prefHeight="34.0" prefWidth="370.0" style="-fx-background-color: #D3EFBD;" VBox.vgrow="ALWAYS" />
+      <Label alignment="CENTER" prefHeight="48.0" prefWidth="421.0" style="-fx-background-color: #2E3532;" text="FOOD PER PLAYER" textFill="#e0e2db" VBox.vgrow="ALWAYS">
+         <font>
+            <Font name="Arial Bold Italic" size="13.0" />
+         </font></Label>
+      <TextField fx:id="foodPerPlayerField" alignment="CENTER" prefHeight="34.0" prefWidth="370.0" style="-fx-background-color: #D3EFBD;" VBox.vgrow="ALWAYS" />
+      <Label alignment="CENTER" prefHeight="48.0" prefWidth="421.0" style="-fx-background-color: #2E3532;" text="STATE DELAY MS" textFill="#e0e2db" VBox.vgrow="ALWAYS">
+         <font>
+            <Font name="Arial Bold Italic" size="13.0" />
+         </font></Label>
+      <TextField fx:id="stateDelayMsField" alignment="CENTER" prefHeight="34.0" prefWidth="370.0" style="-fx-background-color: #D3EFBD;" VBox.vgrow="ALWAYS" />
+      <Label alignment="CENTER" prefHeight="48.0" prefWidth="421.0" style="-fx-background-color: #2E3532;" text="DEAD PROB FOOD" textFill="#e0e2db" VBox.vgrow="ALWAYS">
+         <font>
+            <Font name="Arial Bold Italic" size="13.0" />
+         </font></Label>
+      <TextField fx:id="deadProbFoodField" alignment="CENTER" prefHeight="34.0" prefWidth="370.0" style="-fx-background-color: #D3EFBD;" VBox.vgrow="ALWAYS" />
+      <Label alignment="CENTER" prefHeight="48.0" prefWidth="421.0" style="-fx-background-color: #2E3532;" text="PING DELAY MS" textFill="#e0e2db" VBox.vgrow="ALWAYS">
+         <font>
+            <Font name="Arial Bold Italic" size="13.0" />
+         </font></Label>
+      <TextField fx:id="pingDelayMsField" alignment="CENTER" prefHeight="34.0" prefWidth="370.0" style="-fx-background-color: #D3EFBD;" VBox.vgrow="ALWAYS" />
+      <Label alignment="CENTER" prefHeight="48.0" prefWidth="421.0" style="-fx-background-color: #2E3532;" text="NODE TIMEOUT MS" textFill="#e0e2db" VBox.vgrow="ALWAYS">
+         <font>
+            <Font name="Arial Bold Italic" size="13.0" />
+         </font></Label>
+      <TextField fx:id="nodeTimeoutMsField" alignment="CENTER" prefHeight="34.0" prefWidth="370.0" style="-fx-background-color: #D3EFBD;" VBox.vgrow="ALWAYS" />
+      <Button fx:id="createButton" mnemonicParsing="false" prefHeight="68.0" prefWidth="432.0" style="-fx-background-color: #D2D4C8;" text="CREATE" VBox.vgrow="ALWAYS" />
+      <Button fx:id="cancelButton" mnemonicParsing="false" prefHeight="74.0" prefWidth="413.0" style="-fx-background-color: #D2D4C8;" text="CANCEL" VBox.vgrow="ALWAYS" />
+   </children>
+</VBox>

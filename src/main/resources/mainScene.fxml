@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="snakes.MainSceneController">
+   <children>
+      <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="400.0" style="-fx-background-color: #2E3532;">
+               <children>
+                  <Button fx:id="newGameButton" focusTraversable="false" layoutX="14.0" layoutY="20.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" text="New game" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="20.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Button>
+                  <Button fx:id="refreshButton" layoutX="253.0" layoutY="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="120.0" text="Refresh">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Button>
+               </children>
+            </AnchorPane>
+            <HBox fx:id="titlesList" alignment="BASELINE_CENTER" minHeight="-Infinity" prefHeight="52.0" prefWidth="900.0" style="-fx-background-color: #DFAFDF;">
+               <children>
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="51.0" prefWidth="250.0" style="-fx-background-color: #8B2635;" text="Master" textAlignment="CENTER" textFill="#e0e2db" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Arial Bold Italic" size="18.0" />
+                     </font></Label>
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="51.0" prefWidth="229.0" style="-fx-background-color: #8B2635;" text="Players count" textAlignment="CENTER" textFill="#e0e2db" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Arial Bold Italic" size="18.0" />
+                     </font></Label>
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="51.0" prefWidth="219.0" style="-fx-background-color: #8B2635;" text="Field size" textAlignment="CENTER" textFill="#e0e2db" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Arial Bold Italic" size="18.0" />
+                     </font></Label>
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: #8B2635;" text="food" textAlignment="CENTER" textFill="#e0e2db" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Arial Bold Italic" size="18.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <VBox fx:id="gamesList" alignment="CENTER" fillWidth="false" prefHeight="468.0" prefWidth="900.0" style="-fx-background-color: #D3EFBD;" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
