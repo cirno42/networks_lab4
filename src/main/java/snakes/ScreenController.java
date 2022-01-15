@@ -10,13 +10,15 @@ import lombok.Setter;
 
 import java.io.IOException;
 
+@Getter
+@Setter
 public class ScreenController {
     void setScreen(String name, ActionEvent actionEvent, int width, int height) {
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource(name));
         loader.setControllerFactory(c -> factory(name));
         Parent root = null;
         try {
-            root = (Parent) loader.load();
+            root = loader.load();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -47,7 +49,6 @@ public class ScreenController {
     ScreenController(Node node) {
         this.node = node;
     }
-    @Getter
-    @Setter
+
     private Node node;
 }

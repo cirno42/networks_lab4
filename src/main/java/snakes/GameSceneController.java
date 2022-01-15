@@ -15,17 +15,9 @@ import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import snakes.proto.SnakesProto;
 
-import java.net.URL;
 import java.util.List;
-import java.util.ResourceBundle;
 
 public class GameSceneController extends ScreenController {
-
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
     @FXML
     private Canvas snakeField;
@@ -35,9 +27,6 @@ public class GameSceneController extends ScreenController {
 
     @FXML
     private VBox infoList;
-
-    @FXML
-    private Button pauseButton;
 
     @FXML
     private Button exitButton;
@@ -56,7 +45,7 @@ public class GameSceneController extends ScreenController {
 
     private Thread drawer;
 
-    GameSceneController(Node node) {
+    protected GameSceneController(Node node) {
         super(node);
     }
 

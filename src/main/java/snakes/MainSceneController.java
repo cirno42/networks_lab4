@@ -12,31 +12,22 @@ import javafx.scene.text.FontWeight;
 import snakes.proto.SnakesProto;
 
 import java.net.SocketAddress;
-import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.ResourceBundle;
 
 public class MainSceneController extends ScreenController {
 
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
     @FXML
     private Button newGameButton;
 
-    @FXML Button refreshButton;
-
     @FXML
-    private HBox titlesList;
+    Button refreshButton;
 
     @FXML
     private VBox gamesList;
 
-    private Map<SocketAddress, HBox> gameRecords = new HashMap<>();
+    private final Map<SocketAddress, HBox> gameRecords = new HashMap<>();
 
     @FXML
     void initialize() {
@@ -47,8 +38,7 @@ public class MainSceneController extends ScreenController {
         refreshButton.setOnAction(actionEvent -> update());
     }
 
-
-    MainSceneController(Node node) {
+    protected MainSceneController(Node node) {
         super(node);
     }
 

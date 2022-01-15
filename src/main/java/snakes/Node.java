@@ -23,7 +23,6 @@ public class Node extends Thread {
     private Thread pingSender;
     private final Thread messageCleaner;
 
-
     @Getter
     private final int unicastPort;
 
@@ -57,15 +56,15 @@ public class Node extends Thread {
 
     private SnakesProto.NodeRole role = SnakesProto.NodeRole.VIEWER;
 
-    private Map<Integer, SnakesProto.GamePlayer> deadPlayers = new HashMap<>();
-    private List<SnakesProto.GameState.Coord> removedFood = new LinkedList<>();
+    private final Map<Integer, SnakesProto.GamePlayer> deadPlayers = new HashMap<>();
+    private final List<SnakesProto.GameState.Coord> removedFood = new LinkedList<>();
     private final List<SnakesProto.GamePlayer> playersToRemove = new LinkedList<>();
-    private Map<Integer, Long> lastSentMessage = new HashMap<>();
-    private List<SnakesProto.GameState.Coord> food = new LinkedList<>();
-    private int deputyId = -1;
+    private final Map<Integer, Long> lastSentMessage = new HashMap<>();
+    private final List<SnakesProto.GameState.Coord> food = new LinkedList<>();
+    //private final int deputyId = -1;
     private List<SnakesProto.GameState.Snake> snakes = new LinkedList<>();
-    private Map<Integer, SnakesProto.GamePlayer> players = new HashMap<>();
-    private Map<Integer, SnakesProto.Direction> directionMap = new HashMap<>();
+    private final Map<Integer, SnakesProto.GamePlayer> players = new HashMap<>();
+    private final Map<Integer, SnakesProto.Direction> directionMap = new HashMap<>();
     private DatagramSocket unicastSocket;
     private MulticastSocket multicastSocket;
 
@@ -473,7 +472,6 @@ public class Node extends Thread {
             if (pointCnt == 2 && direction.equals(prevDirection)) {
                 tail = movePoint(tail, invertDirection(getDirection(tail)));
             }
-            int it = 0;
             removedFood.add(head);
             SnakesProto.GamePlayer player = players.get(snake.getPlayerId());
             if (player != null) {
@@ -1159,7 +1157,7 @@ public class Node extends Thread {
     }
 
 
-    boolean joinGame(SocketAddress address) {
+    protected boolean joinGame(SocketAddress address) {
         init();
 
         SnakesProto.GameMessage message = SnakesProto.GameMessage
@@ -1243,7 +1241,7 @@ public class Node extends Thread {
 
     }
 
-    void exitGame() {
+    protected void exitGame() {
         idInGame = -1;
         synchronized (sync) {
             inGame = false;
@@ -1274,7 +1272,7 @@ public class Node extends Thread {
     }
 
 
-    boolean createGame(int width, int height, int foodStatic, float foodPerPlayer, int stateDelayMs,
+    protected boolean createGame(int width, int height, int foodStatic, float foodPerPlayer, int stateDelayMs,
                        float deadProbFood, int pingDelayMs, int nodeTimeoutMs) {
         init();
         idInGame = 0;
@@ -1331,7 +1329,7 @@ public class Node extends Thread {
     }
 
 
-    void stopWork() {
+    protected void stopWork() {
         messageCleaner.interrupt();
         announceListener.interrupt();
         multicastSocket.close();
