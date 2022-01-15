@@ -6,4 +6,4 @@ To build use:
 
 To run use 
 
->mvn exec:java -Dexec.args="<port> <nickname>"
+>mvn exec:java -Dexec.args="port nickname"
