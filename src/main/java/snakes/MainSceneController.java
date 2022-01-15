@@ -38,7 +38,7 @@ public class MainSceneController extends ScreenController {
         refreshButton.setOnAction(actionEvent -> update());
     }
 
-    protected MainSceneController(Node node) {
+    public MainSceneController(Node node) {
         super(node);
     }
 

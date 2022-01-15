@@ -1157,7 +1157,7 @@ public class Node extends Thread {
     }
 
 
-    protected boolean joinGame(SocketAddress address) {
+    public boolean joinGame(SocketAddress address) {
         init();
 
         SnakesProto.GameMessage message = SnakesProto.GameMessage
@@ -1241,7 +1241,7 @@ public class Node extends Thread {
 
     }
 
-    protected void exitGame() {
+    public void exitGame() {
         idInGame = -1;
         synchronized (sync) {
             inGame = false;
@@ -1272,7 +1272,7 @@ public class Node extends Thread {
     }
 
 
-    protected boolean createGame(int width, int height, int foodStatic, float foodPerPlayer, int stateDelayMs,
+    public boolean createGame(int width, int height, int foodStatic, float foodPerPlayer, int stateDelayMs,
                        float deadProbFood, int pingDelayMs, int nodeTimeoutMs) {
         init();
         idInGame = 0;
@@ -1329,7 +1329,7 @@ public class Node extends Thread {
     }
 
 
-    protected void stopWork() {
+    public void stopWork() {
         messageCleaner.interrupt();
         announceListener.interrupt();
         multicastSocket.close();

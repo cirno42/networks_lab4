@@ -65,7 +65,7 @@ public class GameSetupController extends ScreenController{
                 Integer.parseInt(nodeTimeoutMsField.getText()));
     }
 
-    protected GameSetupController(Node node) {
+    public GameSetupController(Node node) {
         super(node);
     }
 

@@ -32,7 +32,7 @@ public class GameSceneController extends ScreenController {
     private Button exitButton;
 
     @FXML
-    void initialize() {
+    public void initialize() {
         exitButton.setOnAction(actionEvent -> {
             getNode().exitGame();
             drawer.interrupt();
@@ -45,7 +45,7 @@ public class GameSceneController extends ScreenController {
 
     private Thread drawer;
 
-    protected GameSceneController(Node node) {
+    public GameSceneController(Node node) {
         super(node);
     }
 
@@ -192,7 +192,7 @@ public class GameSceneController extends ScreenController {
 
 
     @FXML
-    void handleKeyPressed(KeyEvent event) {
+    private void handleKeyPressed(KeyEvent event) {
         switch (event.getCode()) {
             case W: {
                 getNode().changeDirection(SnakesProto.Direction.UP);

@@ -9,7 +9,7 @@ import java.net.DatagramPacket;
 @Setter
 class PacketUniqueID {
 
-    PacketUniqueID(long firstTime, long lastTime, DatagramPacket packet, int receiverId) {
+    public PacketUniqueID(long firstTime, long lastTime, DatagramPacket packet, int receiverId) {
         this.firstTime = firstTime;
         this.lastTime = lastTime;
         this.packet = packet;

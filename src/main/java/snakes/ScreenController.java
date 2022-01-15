@@ -13,7 +13,7 @@ import java.io.IOException;
 @Getter
 @Setter
 public class ScreenController {
-    void setScreen(String name, ActionEvent actionEvent, int width, int height) {
+    public void setScreen(String name, ActionEvent actionEvent, int width, int height) {
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource(name));
         loader.setControllerFactory(c -> factory(name));
         Parent root = null;
@@ -46,7 +46,7 @@ public class ScreenController {
         }
     }
 
-    ScreenController(Node node) {
+    public ScreenController(Node node) {
         this.node = node;
     }
 
